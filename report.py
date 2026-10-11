@@ -4,10 +4,9 @@ name = input("What's your name? ").title()
 block1 = float(input("Hours in deep work block 1: "))
 block2 = float(input("Hours in deep work block 2: "))
 block3 = float(input("Hours in deep work block 3: "))
-rest_day = input("Was today a rest day? (yes/no) ").lower() == "yes"
-hour = int(input("What hour did you stop studying? (0-23) "))
 light = float(input("Hours in light study: "))
-
+rest_day = input("Was today a rest day? (yes/no) ").lower() == "yes"
+hour = int(input("What hour did you stop studying? (0-23) ")) 
 total = block1 + block2 + block3 + light
 valid = (0 <= block1 <= 12 and 0 <= block2 <= 12 and 0 <= block3 <= 12
          and 0 <= light <= 12 and total <= 24)
