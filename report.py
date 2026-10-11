@@ -4,7 +4,8 @@ name = input("What's your name? ").title()
 block1 = float(input("Hours in deep work block 1: "))
 block2 = float(input("Hours in deep work block 2: "))
 block3 = float(input("Hours in deep work block 3: "))
-
+rest_day = input("Was today a rest day? (yes/no) ").lower() == "yes"
+hour = int(input("What hour did you stop studying? (0-23) "))
 light = float(input("Hours in light study: "))
 
 total = block1 + block2 + block3 + light
@@ -35,4 +36,11 @@ else:
 if valid and total < 8:
     print(f"{8 - total:.1f} h more makes it a full-timer day.")
 
+if rest_day:
+    print("Rest day: your streak is safe.")
+
+if not 0 <= hour <= 23:
+    print(f"{hour} isn't a real hour: hours go from 0 to 23.")
+elif hour >= 23 or hour < 5:
+    print("Late night! Sleep is when your brain turns today's study into memory.")
 
