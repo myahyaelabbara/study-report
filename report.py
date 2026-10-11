@@ -1,0 +1,1 @@
+print("=== Study day report ===") 
